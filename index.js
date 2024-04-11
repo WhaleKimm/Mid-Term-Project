@@ -22,3 +22,62 @@ let typing = function () {
 };
 
 setInterval(typing, 150);
+
+// 이미지 슬라이드
+let imgIndex = 0;
+let position = 0;
+const IMG_WIDTH = 329;
+const $btnPrev = document.querySelector(".btn-prev");
+const $btnNext = document.querySelector(".btn-next");
+const $slideImgs = document.querySelector(".slide-images");
+// JavaScript
+const $description = document.querySelector(".description"); // 설명 글씨 요소 선택
+
+let prev = function () {
+  if (imgIndex > 0) {
+    $btnNext.removeAttribute("disabled");
+    position += IMG_WIDTH;
+    $slideImgs.style.transform = `translateX(${position}px)`;
+    imgIndex = imgIndex - 1;
+    toggleDescription(); // 설명 글씨 업데이트
+  }
+  if (imgIndex == 0) {
+    $btnPrev.setAttribute("disabled", "true");
+  }
+};
+
+let next = function () {
+  if (imgIndex < 5) {
+    $btnPrev.removeAttribute("disabled");
+    position -= IMG_WIDTH;
+    $slideImgs.style.transform = `translateX(${position}px)`;
+    $slideImgs.style.transition = "transform .5s ease-out";
+    imgIndex = imgIndex + 1;
+    toggleDescription(); // 설명 글씨 업데이트
+  }
+  if (imgIndex == 4) {
+    $btnNext.setAttribute("disabled", "true");
+    showNextDescription(); // 다음 설명 표시
+  }
+};
+
+let toggleDescription = function () {
+  if (imgIndex == 4) {
+    $description.style.display = "block"; // 설명 글씨 표시
+  } else {
+    $description.style.display = "none"; // 설명 글씨 숨김
+  }
+};
+
+let showNextDescription = function () {
+  const nextDescription = document.querySelector(".description-next");
+  nextDescription.style.display = "block"; // 다음 설명 표시
+};
+
+let init = function () {
+  $btnPrev.setAttribute("disabled", "true");
+  $btnPrev.addEventListener("click", prev);
+  $btnNext.addEventListener("click", next);
+};
+
+init();

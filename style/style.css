@@ -127,16 +127,16 @@ body::-webkit-scrollbar {
   display: flex;
   margin: 0 auto;
 }
-.slide-container {
-  width: 438px;
-  margin: 0 auto;
-}
 .slide-album {
   position: relative;
-  width: 438px;
+  width: 329px;
   height: 438px;
   overflow: hidden;
   border-radius: 20px;
+}
+.slide-container {
+  width: 329px;
+  margin: 0 auto;
 }
 .slide-images {
   position: relative;
@@ -144,7 +144,7 @@ body::-webkit-scrollbar {
   height: 438px;
 }
 .slide-images img {
-  width: 438px;
+  width: 329px;
   height: 438px;
 }
 .btn-next,
@@ -408,4 +408,17 @@ body::-webkit-scrollbar {
 .btn-moveTop:hover {
   background-image: url(../src/img/btn-moveTop-hover.png);
   transition: 0.5s ease-out;
+}
+.description {
+  display: none; /* 초기에 숨김 */
+  width: 300px;
+  margin-top: 30px;
+  font-size: 15px;
+  font-family: "GmarketBold";
+  color: #6a75ca;
+  line-height: 58px;
+  position: absolute;
+  top: calc(82% + 50px); /* 사진 컨테이너 아래로 이동 */
+  left: 41%; /* 가운데 정렬 */
+  transform: translateX(-50%); /* 가운데 정렬 */
 }
