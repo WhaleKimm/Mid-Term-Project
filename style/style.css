@@ -43,6 +43,7 @@ body::-webkit-scrollbar {
   border-bottom: 2px solid black;
 }
 .btn-code {
+  display: inline-block;
   padding: 8px 23px;
   border-radius: 20px;
   background-color: #6a75ca;
@@ -80,6 +81,7 @@ body::-webkit-scrollbar {
 .cont-intro img {
   width: 230px;
   margin-right: 40px;
+  position: relative;
 }
 .txt-title {
   width: 620px;
@@ -350,14 +352,18 @@ body::-webkit-scrollbar {
   left: 0;
 }
 .modal {
-  position: absolute;
-  top: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%; /* 최대 너비 지정 */
   width: 440px;
   background-color: #e0e3fd;
   border-radius: 10px;
   text-align: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
+
 .modal h3 {
   margin: 40px 0 7px 0;
   font-size: 25px;
@@ -419,16 +425,11 @@ body::-webkit-scrollbar {
 }
 .description {
   display: none; /* 초기에 숨김 */
-  width: 300px;
-  margin-top: 30px;
   font-size: 15px;
   font-family: "GmarketBold";
   color: #6a75ca;
   line-height: 58px;
   position: absolute;
-  top: calc(82% + 50px); /* 사진 컨테이너 아래로 이동 */
-  left: 41%; /* 가운데 정렬 */
-  transform: translateX(-50%); /* 가운데 정렬 */
 }
 /* 스크롤바 추가 */
 body {
