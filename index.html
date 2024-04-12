@@ -1,11 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ko">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>오승민 (Seungmin)</title>
+      <link rel="stylesheet" href="style/reset.css"/>
+      <link rel="stylesheet" href="style/style.css" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="src/img/favicon.png"
+      />
+      <title>Document</title>
+  </head>
+  <body>
+      <main id="app">
+        <section class="section-intro">
+          <header id="header">
+            <h1 class="txt-invisible">Portfolio</h1>
+            <nav>
+              <ul class="nav-list">
+                <li><a href="#about" class="list-link">About</a></li>
+                <li><a href="#project" class="list-link">Project</a></li>
+                <li><a href="#contact" class="list-link">Contact</a></li>
+                <li>
+                  <a
+                    href="https://whalekimm.github.io/Introduction/"
+                    class="list-link btn-code"
+                    >code
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="bar-bg">
+              <span class="bar-ing"></span>
+            </div>
+          </header>
+  
+          <div class="cont-intro">
+            <a name="info"></a>
+            <img src="src/img/profile.png" alt="프로필 이미지" />
+            <div>
+              <p class="txt-title"></p>
+              <a href="#about" class="btn-more">More</a>
+            </div>
+          </div>
+        </section> 
+
+        <section class="section-about">
+          <a name="about"></a>
+          <h2>About.</h2>
+          <div class="cont-about">
+            <div class="slide-container">
+              <div class="slide-album">
+                <div class="slide-images">
+                  <img src="src/img/img_me_1.png" alt="내 사진" />
+                  <img src="src/img/img_me_2.png" alt="내 사진" />
+                  <img src="src/img/img_me_3.png" alt="내 사진" />
+                  <img src="src/img/img_me_5.png" alt="내 사진" />
+                  <img src="src/img/img_me_4.png" alt="내 사진" />
+                </div>
+                <button class="btn-next">▶</button>
+                <button class="btn-prev">◀</button>
+              </div>
+            </div>
+            <div class="info-about">
+              <dl class="txt-about">
+                <div>
+                  <dt>이름</dt>
+                  <dd>오승민</dd>
+                </div>
+                <div>
+                  <dt>생년월일</dt>
+                  <dd>01.07.09</dd>
+                </div>
+                <div>
+                  <dt>거주지</dt>
+                  <dd>용인시 수지구</dd>
+                </div>
+                <div>
+                  <dt>학교/전공</dt>
+                  <dd>단국대학교/컴퓨터공학과</dd>
+                </div>
+                <div>
+                  <div class="description">
+                    <dd>**이 사진은 생성형 AI를 이용한 사진입니다**</dd>
+                  </div>
+                </div>
+              </dl>
+              <div class="btn-about">
+                <button class="btn-open" type="button">
+                  <img src="src/img/icon-diary.png" alt="" />취미
+                </button>
+                <button class="btn-open" type="button">
+                  <img src="src/img/icon-heart.png" alt="" />성격
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="modal-background">
+          <div class="modal">
+            <h3>취미</h3>
+            <h4>클라이밍</h4>
+            <video src="src\img\mp4-climb.mp4" controls alt="클라이밍 동영상"></video>
+            <p>
+              취미는 클라이밍이에요. 문제를 풀며 즐거움을 느끼고,<br>
+              다음 단계로 계속 도전하는 과정을 즐깁니다.<br>
+              최근에 LV6 문제를 풀었습니다!!
+            </p>
+            <button type="button" class="btn-close">Close</button>
+          </div>
+        </div>
+        <div class="modal-background">
+          <div class="modal">
+            <h3>성격</h3>
+            <h4>체계적이고 승부욕이 강해요</h4>
+            <img src="src/img/img-char.png" alt="판다 사진" />
+            <p>
+              하루를 계획하고 행동하는 것을 좋아하고,<br>
+              한 번 승부가 붙으면 지지 않으려는 경향이 강합니다.
+            </p>
+            <button type="button" class="btn-close">Close</button>
+          </div>
+        </div>
+
+        <section class="section-project">
+          <a name="project"></a>
+          <h2>Project.</h2>
+          <article class="box-project">
+            <div>
+              <img
+                class="img-project"
+                src="src/img/project1.PNG"
+                alt="첫번째 프로젝트 이미지"
+              />
+              <button
+                class="btn-detail"
+                type="button"
+                onclick="window.open('https://whalekimm.github.io/lottoNumGenerator/', '_blank')"
+              >
+                자세히 보기
+              </button>
+            </div>
+            <div class="txt-project">
+              <h3>행운생성기</h3>
+              <dl>
+                <dt>기간</dt>
+                <dd>2024.03</dd>
+                <dt>설명</dt>
+                <dd>로또 번호를 자동/반자동으로 생성해주는 사이트입니다.</dd>
+                <dt>사용 기술</dt>
+                <dd>HTML/CSS, JavaScript</dd>
+              </dl>
+            </div>
+          </article>
+        </section>
+        <footer id="footer">
+          <a name="contact"></a>
+          <div class="box-footer">
+            <h2>Contact.</h2>
+            <ul class="link-sns">
+              <li>
+                <a href="https://github.com/WhaleKimm"
+                  ><img
+                    class="img-github"
+                    src="src/img/icon-github.png"
+                    alt="깃허브 주소"
+                  />github</a
+                >
+              </li>
+              <li>
+                <a href="https://whalekimm.tistory.com/"
+                  ><img
+                    class="img-tistory"
+                    src="src/img/icon-tistory.png"
+                    alt="블로그 주소"
+                  />Blog</a
+                >
+              </li>
+            </ul>
+            <p>2024 - Seungmin</p>
+          </div>
+        </footer>
+        <button onclick="moveToTop()" class="btn-moveTop"></button>
+        <script src="index.js"></script>
+      </main>
+  </body>
 </html>
