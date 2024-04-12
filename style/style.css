@@ -372,9 +372,17 @@ body::-webkit-scrollbar {
   margin: 30px auto;
   border-radius: 15px;
 }
+.modal video {
+  max-width: 100%;
+  max-height: 80vh; /* 모달의 높이에 맞게 조절 */
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  border-radius: 15px;
+}
 .modal p {
   margin: 0 auto;
-  width: 310px;
+  width: 400px;
   font-size: 17px;
   line-height: 24px;
 }
@@ -421,4 +429,8 @@ body::-webkit-scrollbar {
   top: calc(82% + 50px); /* 사진 컨테이너 아래로 이동 */
   left: 41%; /* 가운데 정렬 */
   transform: translateX(-50%); /* 가운데 정렬 */
+}
+/* 스크롤바 추가 */
+body {
+  overflow-y: scroll;
 }
