@@ -576,19 +576,7 @@ body::-webkit-scrollbar {
     margin: 10px auto; /* Center the button with automatic margins */
     box-sizing: border-box; /* Include padding and border in the button's width */
   }
-  /* Adjust footer layout and text size for smaller screens */
-  #footer {
-    padding: 40px 20px; /* Adjust padding */
-  }
-
-  #footer h2 {
-    font-size: 24px; /* Adjust footer heading size */
-  }
-
-  /* Adjust move-to-top button size and position */
   .btn-moveTop {
-    width: 40px; /* Reduce button size */
-    height: 40px;
     right: 20px; /* Adjust position */
     bottom: 20px;
   }
