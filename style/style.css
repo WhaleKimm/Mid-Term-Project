@@ -431,7 +431,3 @@ body::-webkit-scrollbar {
   line-height: 58px;
   position: absolute;
 }
-/* 스크롤바 추가 */
-body {
-  overflow-y: scroll;
-}
