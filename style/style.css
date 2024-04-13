@@ -431,3 +431,51 @@ body::-webkit-scrollbar {
   line-height: 58px;
   position: absolute;
 }
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  body {
+      padding-top: 50px; /* Reduced top padding */
+  }
+
+  /* Reduced header padding */
+  #header {
+      padding: 20px;
+  }
+
+  /* Stack the navigation list vertically */
+  .nav-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Adjust margins for list items */
+  .list-link {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  /* Adjust button sizes for better touch */
+  .btn-code {
+      padding: 10px 15px;
+  }
+
+  /* Adjust intro section margin */
+  .cont-intro {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  /* Make images responsive */
+  .cont-intro img,
+  .slide-images img,
+  .img-project {
+      width: 90%; /* Adjust width to fit the screen */
+      height: auto; /* Adjust height automatically */
+      margin: 10px auto; /* Center images with margin */
+  }
+
+  /* Adjust title size for smaller screens */
+  .txt-title {
+      font-size: 2rem;
+  }
+}
