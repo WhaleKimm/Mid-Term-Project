@@ -431,51 +431,37 @@ body::-webkit-scrollbar {
   line-height: 58px;
   position: absolute;
 }
-/* Media query for mobile devices */
+
+/* 모바일 화면에 최적화된 CSS 코드 */
 @media only screen and (max-width: 768px) {
-  body {
-      padding-top: 50px; /* Reduced top padding */
+  body, #header, .section-about, .section-project, .cont-intro, .slide-album, .slide-container {
+      padding: 0;
+      margin: 0;
+      width: 100%;
   }
 
-  /* Reduced header padding */
-  #header {
-      padding: 20px;
+  .cont-intro img, .slide-images img, .img-project {
+      max-width: 100%;
+      height: auto;
   }
 
-  /* Stack the navigation list vertically */
-  .nav-list {
+  .nav-list, .cont-about, .btn-about, .section-project, .box-footer {
       flex-direction: column;
       align-items: center;
   }
 
-  /* Adjust margins for list items */
-  .list-link {
-      margin-left: 0;
-      margin-bottom: 10px;
+  .txt-title, .txt-about, .txt-project, .box-footer, .modal {
+      font-size: 16px;
+      text-align: center;
   }
 
-  /* Adjust button sizes for better touch */
-  .btn-code {
-      padding: 10px 15px;
+  .btn-more, .btn-about button, .btn-detail {
+      padding: 12px 24px;
+      font-size: 16px;
   }
 
-  /* Adjust intro section margin */
-  .cont-intro {
-      margin-top: 20px;
-      margin-bottom: 20px;
-  }
-
-  /* Make images responsive */
-  .cont-intro img,
-  .slide-images img,
-  .img-project {
-      width: 90%; /* Adjust width to fit the screen */
-      height: auto; /* Adjust height automatically */
-      margin: 10px auto; /* Center images with margin */
-  }
-
-  /* Adjust title size for smaller screens */
-  .txt-title {
-      font-size: 2rem;
+  .btn-moveTop {
+      right: 20px;
+      bottom: 20px;
   }
 }
