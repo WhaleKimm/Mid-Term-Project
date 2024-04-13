@@ -432,36 +432,164 @@ body::-webkit-scrollbar {
   position: absolute;
 }
 
-/* 모바일 화면에 최적화된 CSS 코드 */
 @media only screen and (max-width: 768px) {
-  body, #header, .section-about, .section-project, .cont-intro, .slide-album, .slide-container {
-      padding: 0;
-      margin: 0;
-      width: 100%;
+  /* Reduce the padding at the top of the body to account for a smaller fixed header on mobile */
+  body {
+    padding-top: 60px;
   }
 
-  .cont-intro img, .slide-images img, .img-project {
-      max-width: 100%;
-      height: auto;
+  /* Adjust header padding and alignment for smaller screens */
+  #header {
+    padding: 0px;
+    font-size: 8px;
   }
 
-  .nav-list, .cont-about, .btn-about, .section-project, .box-footer {
-      flex-direction: column;
-      align-items: center;
+  /* Stack the navigation items vertically and align items to the center for better use of space */
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around; /* 이 값을 space-between으로 변경하여 더 많은 공간을 줄 수 있습니다. */
+    place-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  .txt-title, .txt-about, .txt-project, .box-footer, .modal {
-      font-size: 16px;
-      text-align: center;
+  .list-link {
+    padding: 10px; /* 네비게이션 링크에 패딩을 추가하여 탭하기 쉽게 만듭니다 */
+    font-size: 16px;
+    margin: 10px 0;
   }
 
-  .btn-more, .btn-about button, .btn-detail {
-      padding: 12px 24px;
-      font-size: 16px;
+  .btn-code {
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
   }
 
+  .cont-intro {
+    flex-direction: row; /* 가로 방향으로 요소 배치 */
+    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬 */
+    justify-content: center; /* 요소들을 가로 방향으로 중앙 정렬 */
+    position: relative;
+  }
+
+  .cont-intro img {
+    width: 150px; /* 이미지 크기 조정 */
+    margin-right: 0; /* 오른쪽 마진 제거 */
+    position: relative; /* 상대적 위치 조정을 위해 기본값으로 설정 */
+  }
+
+  .txt-title {
+    width: auto; /* 자동 너비 설정 */
+    margin-top: 20px; /* 위 여백 조정 */
+    margin-bottom: 20px;
+    font-size: 28px; /* 글꼴 크기 조정 */
+    line-height: 1.2; /* 줄 간격 조정 */
+  }
+  .txt-title::before {
+    content: "안녕하세요.\A 개발자 오승민입니다.";
+    white-space: pre; 
+    display: block;
+  }
+  .btn-more {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+
+  .section-about {
+    padding: 40px 15px; /* Adjust padding */
+  }
+
+  .cont-about {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .slide-container {
+    width: 82%; /* Full width for smaller screens */
+    margin: 0; /* Remove margin */
+  }
+  
+  .slide-album,
+  .slide-images img {
+    width: 100%; /* Full width for the slider and images */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .btn-about button {
+    width: 100px; /* Smaller buttons */
+    height: 100px;
+    margin-right: 10px; /* Adjust spacing between buttons */
+    margin-bottom: 10px; /* Space below buttons when wrapped */
+  }
+
+  .info-about {
+    margin: 20px 0; /* Space above and below the text */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .txt-about {
+    display: block; /* Stack dl items */
+  }
+
+  .txt-about dt {
+    font-size: 20px; /* Smaller font size for titles */
+    width: auto; /* Auto width to fit content */
+    margin-right: 5px; /* Space after title */
+  }
+
+  .txt-about dd {
+    font-size: 18px; /* Smaller font size for details */
+  }
+
+  /* Update project section styling for mobile */
+  .section-project {
+    margin-bottom: 100px;
+  }
+
+  /* Adjust individual project box layout */
+  .box-project {
+    flex-direction: column; /* Stack children vertically */
+    width: auto; /* Let the width be auto */
+    margin: 0 10px; /* Add horizontal margin */
+  }
+
+  /* Make project images responsive */
+  .img-project {
+    max-width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height automatically */
+    margin-bottom: 20px; /* Adjust bottom margin */
+  }
+  .btn-detail {
+    cursor: pointer;
+    padding: 10px; /* Reduced padding */
+    width: auto; /* Auto width for full container width */
+    text-align: center; /* Center the text inside the button */
+    border-radius: 15px;
+    background-color: #6a75ca;
+    border: solid 2px #6a75ca;
+    color: white;
+    font-size: 16px; /* Slightly smaller font size for mobile */
+    display: block; /* Block display to fill the width */
+    margin: 10px auto; /* Center the button with automatic margins */
+    box-sizing: border-box; /* Include padding and border in the button's width */
+  }
+  /* Adjust footer layout and text size for smaller screens */
+  #footer {
+    padding: 40px 20px; /* Adjust padding */
+  }
+
+  #footer h2 {
+    font-size: 24px; /* Adjust footer heading size */
+  }
+
+  /* Adjust move-to-top button size and position */
   .btn-moveTop {
-      right: 20px;
-      bottom: 20px;
+    width: 40px; /* Reduce button size */
+    height: 40px;
+    right: 20px; /* Adjust position */
+    bottom: 20px;
   }
 }
