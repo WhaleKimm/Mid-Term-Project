@@ -1,5 +1,5 @@
 # [Web Page]
-<a href="https://whalekimm.github.io/Introduction/" target="_blank">웹페이지</a>로 이동하기
+<a href="https://whalekimm.github.io/Mid-Term-Project/" target="_blank">웹페이지</a>로 이동하기
 
 # 시작 Section
 ![image](https://github.com/WhaleKimm/Introduction/assets/134510321/c30eeef5-1d9e-4ffa-ba31-af94a1a1d940)
